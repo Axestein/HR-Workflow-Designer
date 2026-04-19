@@ -34,6 +34,8 @@ npm run preview
 
 ## Architecture
 
+<img width="1376" height="768" alt="Img" src="https://github.com/user-attachments/assets/b584a406-295d-4cd5-9431-f6b2423b0448" />
+
 ```
 src/
 ├── types/
