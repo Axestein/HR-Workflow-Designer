@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #0a0b0f;
+  --bg-secondary: #111318;
+  --bg-card: #161820;
+  --bg-elevated: #1c1f28;
+  --border: #252832;
+  --border-light: #2e3241;
+  --accent: #f97316;
+  --accent-dim: rgba(249,115,22,0.12);
+  --accent-glow: rgba(249,115,22,0.25);
+  --text-primary: #f1f2f6;
+  --text-secondary: #8b91a8;
+  --text-muted: #565c75;
+  --node-start: #22c55e;
+  --node-task: #3b82f6;
+  --node-approval: #a855f7;
+  --node-auto: #f97316;
+  --node-end: #ef4444;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Syne', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+.mono { font-family: 'DM Mono', monospace; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 2px; }
+
+.react-flow__background { background: var(--bg-primary) !important; }
+.react-flow__edge-path { stroke: #3b4262 !important; stroke-width: 2 !important; }
+.react-flow__edge.selected .react-flow__edge-path { stroke: var(--accent) !important; }
+.react-flow__connection-path { stroke: var(--accent) !important; }
+.react-flow__handle {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  border: 2px solid var(--bg-card) !important;
+  transition: all 0.15s;
+}
+.react-flow__handle:hover { transform: scale(1.4) !important; }
+.react-flow__controls {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+.react-flow__controls-button {
+  background: var(--bg-card) !important;
+  border: none !important;
+  border-bottom: 1px solid var(--border) !important;
+  fill: var(--text-secondary) !important;
+}
+.react-flow__controls-button:hover {
+  background: var(--bg-elevated) !important;
+  fill: var(--text-primary) !important;
+}
+.react-flow__minimap {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 10px !important;
+}
+.react-flow__minimap-mask { fill: rgba(0,0,0,0.4) !important; }
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+
+.slide-in { animation: slideIn 0.25s ease forwards; }
+.fade-up { animation: fadeUp 0.2s ease forwards; }
+.exec-step { animation: fadeUp 0.3s ease forwards; }
+
+.spin { animation: spin-slow 1s linear infinite; }
