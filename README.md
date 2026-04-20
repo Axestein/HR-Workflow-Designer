@@ -2,6 +2,8 @@
 
 A production-grade HR Workflow Designer built for the Tredence Studio Full Stack Engineering Intern case study. Build, configure, and simulate internal HR workflows visually using a drag-and-drop canvas.
 
+https://www.loom.com/share/1363af7f399146ba96b826d6de4035b2
+
 ---
 
 ## Running the Project
